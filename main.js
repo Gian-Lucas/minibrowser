@@ -3,14 +3,19 @@ const path = require("path");
 
 function createWindow() {
   const window = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 500,
+    height: 400,
+    x: 860,
+    y: 10,
+    titleBarStyle: "hidden",
+    alwaysOnTop: true,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
   });
 
-  window.loadFile("index.html");
+  //   window.loadFile("index.html");
+  window.loadURL("https://youtube.com");
 }
 
 app.whenReady().then(() => {
